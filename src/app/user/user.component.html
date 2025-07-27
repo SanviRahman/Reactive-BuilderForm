@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Reactive Form:</h1>
+  <form [formGroup]="newgroup" (ngSubmit)="onDisplay()">
+
+    <!-- First Name -->
+    <div class="contain">
+      <label for="fname">First Name:</label>
+      <input formControlName="fname" type="text" class="input-group" placeholder="Enter your first name">
+      <div *ngIf="fname?.invalid && fname?.touched" class="error">
+        <p *ngIf="fname?.errors?.['required']">* First Name is required.</p>
+      </div>
+    </div>
+
+    <pre></pre>
+
+    <!-- Last Name -->
+    <div class="contain">
+      <label for="lname">Last Name:</label>
+      <input formControlName="lname" type="text" class="input-group" placeholder="Enter your last name">
+      <div *ngIf="lname?.invalid && lname?.touched" class="error">
+        <p *ngIf="lname?.errors?.['required']">* Last Name is required.</p>
+      </div>
+    </div>
+
+    <pre></pre>
+    <!-- Email -->
+    <div class="contain">
+      <label for="email">Email:</label>
+      <input formControlName="email" type="email" class="input-group" placeholder="Enter your email">
+      <div *ngIf="email?.invalid && email?.touched" class="error">
+        <p *ngIf="email?.errors?.['required']">* Email is required.</p>
+        <p *ngIf="email?.errors?.['email']">* Invalid email format.</p>
+      </div>
+    </div>
+
+    <pre></pre>
+    <!-- Password -->
+    <div class="contain">
+      <label for="password">Password:</label>
+      <input formControlName="password" type="password" class="input-group" placeholder="Enter your password">
+      <div *ngIf="password?.invalid && password?.touched" class="error">
+        <p *ngIf="password?.errors?.['required']">* Password is required.</p>
+        <p *ngIf="password?.errors?.['minlength']">Password Minimum 6 Character.</p>
+      </div>
+    </div>
+
+    <pre></pre>
+    <button type="submit">Submit</button>
+  </form>
+</div>
