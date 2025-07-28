@@ -41,7 +41,7 @@ export class UserComponent {
 
   onDisplay(){
     if(this.newgroup.valid){
-      console.log(this.newgroup.value);
+      console.log(this.newgroup);
     }
     else{
       console.log('Form is invalid');
