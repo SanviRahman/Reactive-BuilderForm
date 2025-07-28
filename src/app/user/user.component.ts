@@ -47,5 +47,4 @@ export class UserComponent {
       console.log('Form is invalid');
     }
   }
-
 }
