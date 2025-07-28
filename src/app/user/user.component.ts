@@ -14,13 +14,14 @@ export class UserComponent {
   newgroup: FormGroup;
 
 
-  constructor(private fm: FormBuilder) {
+  constructor(private fm: FormBuilder){
     this.newgroup = this.fm.group({
       fname: ['', [Validators.required]],
-      lname: ['', [Validators.required]],
+      lname: ['', [Validators.required,]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-    })
+      selected: ['', [Validators.required]]
+    });
   }
 
   get fname() {
@@ -36,6 +37,10 @@ export class UserComponent {
 
   get password() {
     return this.newgroup.get('password');
+  }
+
+  get selected() {
+    return this.newgroup.get('selected');
   }
 
 
