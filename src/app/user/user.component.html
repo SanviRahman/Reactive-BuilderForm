@@ -49,13 +49,13 @@
 
     <div>
       <select formControlName="selected" class="input-group">
-      <option value="" disabled>Select</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select> 
-    </div>
-    <div *ngIf="selected?.invalid && selected?.touched" class="error">
-      <p *ngIf="selected?.errors?.['required']">* Please select an option.</p>
+        <option value="" disabled>Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <div *ngIf="selected?.invalid && selected?.touched" class="error">
+        <p *ngIf="selected?.errors?.['required']">* Please select an option.</p>
+      </div>
     </div>
     <pre></pre>
     <button type="submit">Submit</button>
