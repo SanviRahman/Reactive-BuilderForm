@@ -44,7 +44,7 @@ export class UserComponent {
   }
 
 
-  onDisplay(){
+  onDisplay() {
     if(this.newgroup.valid){
       console.log(this.newgroup);
     }
